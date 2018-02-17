@@ -1,0 +1,10 @@
+<p>
+  contacto works!
+</p>
+
+<div *ngIf='parametro'>Parámetro de la url: {{parametro}}</div>
+
+<div *ngIf='!parametro'>
+  <button (click)='redirigir()'>Redirigir ruta con parametro</button>
+</div>
+<button (click)='redirigirDos()'>Redirigir al home</button>

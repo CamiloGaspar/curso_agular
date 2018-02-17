@@ -1,3 +1,10 @@
 <h1>Componente principal</h1>
 <hr>
-<app-empleado></app-empleado>
+<nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a>
+    <a [routerLink]="['/fruta']" [routerLinkActive]="['activado']">Fruta</a>
+    <a [routerLink]="['/empleado']" [routerLinkActive]="['activado']">Empleado</a>
+    <a [routerLink]="['/contacto']" [routerLinkActive]="['activado']">Contacto</a>
+</nav>
+<hr>
+<router-outlet></router-outlet>
