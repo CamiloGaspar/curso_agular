@@ -9,6 +9,8 @@ import { EmpleadoComponent } from './empleado/empleado.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { RopaService } from './services/ropa.service';
+import { ConversorPipe } from './pipes/conversor.pipe';
 
 
 @NgModule({
@@ -17,14 +19,15 @@ import { ContactoComponent } from './contacto/contacto.component';
     EmpleadoComponent,
     FrutaComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, RopaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

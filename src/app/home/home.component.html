@@ -1,3 +1,17 @@
-<p>
-  home works!
-</p>
+<h2>Componente Home</h2>
+<br>
+<p>Fecha: <strong>{{fecha | date: 'yyyy-MM-dd'}}</strong></p>
+<input type="text" [(ngModel)]="prenda_a_guardar">
+<button (click)="addPrenda(prenda_a_guardar)">Añadir prenda</button>
+<p *ngIf="prenda_a_guardar">La prenda que se guardara es: <strong>{{prenda_a_guardar}}</strong></p>
+
+{{8 | conversor:7:6}}
+
+<h3>Listado de ropa:</h3>
+
+<ul>
+  <li *ngFor="let prenda of listadoRopa; let i = index">{{prenda}}
+    <button (click)=eliminarPrenda(i)>Eliminar</button>
+  </li>
+  
+</ul>
