@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { RopaService } from './services/ropa.service';
 import { ConversorPipe } from './pipes/conversor.pipe';
+import { CochesComponent } from './coches/coches.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ConversorPipe } from './pipes/conversor.pipe';
     FrutaComponent,
     HomeComponent,
     ContactoComponent,
-    ConversorPipe
+    ConversorPipe,
+    CochesComponent
   ],
   imports: [
     BrowserModule,
