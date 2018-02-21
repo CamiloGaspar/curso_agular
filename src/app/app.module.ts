@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { appRoutingProviders, routing } from './app-routing.module';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { RopaService } from './services/ropa.service';
 import { ConversorPipe } from './pipes/conversor.pipe';
 import { CochesComponent } from './coches/coches.component';
+import { PeticionesService } from './services/peticiones.service';
+import { PlantillasComponent } from './plantillas/plantillas.component';
 
 
 @NgModule({
@@ -22,14 +25,16 @@ import { CochesComponent } from './coches/coches.component';
     HomeComponent,
     ContactoComponent,
     ConversorPipe,
-    CochesComponent
+    CochesComponent,
+    PlantillasComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     routing
   ],
-  providers: [appRoutingProviders, RopaService],
+  providers: [appRoutingProviders, RopaService, PeticionesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

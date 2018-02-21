@@ -13,12 +13,13 @@
     display: block;
     width: 100%;
   }
-  .listado{
+
+  .listado {
     margin-left: 30px;
   }
 </style>
-<div >
-  <form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset();" >
+<div>
+  <form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset();">
     <p>
       <label>Nombre:</label>
       <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required/>
@@ -42,7 +43,7 @@
       </span>
     </p>
     <p>
-      <input type="submit" value="Guardar"  [disabled]="!formCoche.form.valid"/>
+      <input type="submit" value="Guardar" [disabled]="!formCoche.form.valid" />
     </p>
   </form>
 </div>
@@ -54,4 +55,14 @@
       {{coche.nombre}} - {{coche.caballaje}} - {{coche.color}}
     </li>
   </ul>
+</div>
+
+<div class="listado">
+  <h3>Listado articulos:</h3>
+  <ul *ngIf="articulos">
+    <li *ngFor="let articulo of articulos">
+      {{articulo.id}} - {{articulo.title}} 
+    </li>
+  </ul>
+  <span *ngIf="!articulos">Cargando listado...</span>
 </div>
